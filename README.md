@@ -26,7 +26,12 @@ Modifying starter code so that the website will generate a password and ask the 
 - [Questions](#questions)
 
 ## Screenshot Image
-![Password Generator]()
+![Password Generator](https://github.com/jpace2022/Password-Generator/blob/main/screenshots/Password%201.png)
+(https://github.com/jpace2022/Password-Generator/blob/main/screenshots/Password%202.png)
+(https://github.com/jpace2022/Password-Generator/blob/main/screenshots/Password%203.png)
+(https://github.com/jpace2022/Password-Generator/blob/main/screenshots/Password%204.png)
+(https://github.com/jpace2022/Password-Generator/blob/main/screenshots/Password%205.png)
+(https://github.com/jpace2022/Password-Generator/blob/main/screenshots/Password%206.png)
 
 ## Finished Website
 [https://jpace2022.github.io/Password-Generator/]
