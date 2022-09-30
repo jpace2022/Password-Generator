@@ -17,11 +17,11 @@ function writePassword() {
  
 //out global variable
 //multiple arrays of numbers, specials, uppercase, lowercase
- var uppercaseLetters = ["'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z',"]
- var lowercaseLetters = ["'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'"]
- var specials = [",'!','@','#','$','%','^','&','*','(',')'"]
- var numbers = ["'0','1','2','3','4','5','6','7','8','9'"]
- var password = "" 
+ var uppercaseLetters = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z',]
+ var lowercaseLetters = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+ var specials = [,'!','@','#','$','%','^','&','*','(',')']
+ var numbers = ['0','1','2','3','4','5','6','7','8','9']
+ var password = [] 
  var finalresult = ""; //final password result
 
 
@@ -41,28 +41,28 @@ var numbers2 = confirm ("Do you want numbers?")
 console.log(uppercaseLetters, lowercaseLetters, numbers, specials);
 
 
-  if (!lowercaseLetters && !uppercaseLetters && !numbers && !specials) {
+  if (!lowercaseLetters && !numbers && !specials) {
     alert("Please enter value."); 
   }
   
   if (lowercaseLetters) {
-    password += lowercaseLetters
+    password = password.concat(uppercaseLetters);
   }
 
   if (uppercaseLetters) {
-    password += uppercaseLetters
+    password = password.concat(lowercaseLetters);
   }
 
   if (numbers) {
-    password += numbers
+    password = password.concat(specials);
   }
 
   if (specials) {
-    password += specials
+    passowrd = password.concat(numbers);
   }
 
    for (var i = 0; i < length; i++) {
-     finalresult += (password.charAt(Math.floor(Math.random()*password.length)))
+     finalresult += password[Math.floor(Math.random()*password.length)]
    }
 
    return finalresult 
