@@ -1,63 +1,72 @@
 // Assignment Code
-// Linked js code th html
-console.log("Linked")
- 
-//out global variable
-var passWord = confirm("Do you want to generate a passowrd?")
-var result = "random";
-//multiple arrays of numbers, specials, uppercase, lowercase
-var uppercaseLetters = ["'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z',"]
-var lowercaseLetters = ["'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'"]
-var specials = [",'!','@','#','$','%','^','&','*','(',')'"]
-var numbers = ["'0','1','2','3','4','5','6','7','8','9'"]
-
 var generateBtn = document.querySelector("#generate");
 
-function main() {
-  var options = window.prompt("Do you want to make a password?")
-}
-
-
-generatePassword = prompt("Would you like lowercase?").toAnyCase();
-console.log(generatePassword)
-var computerGeneratePassword = choose()
-console.log(computerGeneratePassword)
-
-if (lowercaseLetters = true) {
-  while (lowercaseLetters = yes) {
-    main();
-  }
-} else if {
-  alert("Would you like uppercase?")
-
-// Write password to the #password input
 function writePassword() {
   var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+   var passwordText = document.querySelector("#password");
+    passwordText.value = password
+  }
 
-  passwordText.value = password;
+  generatePassword
+  console.log(generatePassword)
 
-}
+  writePassword
+  console.log(writePassword)
 
-function generatePassword() {
-  //prompt user for length
-  var passWord = confirm("How many characters do you need for your password. Please pick between 8 and 126")
-  //check length
-  var generatePassword = prompt("How many characters do you need for your password. Please pick between 8 and 126").toAnyCase();
-console.log(generatePassword)
-var computerGeneratePassword = choose()
-console.log(computerGeneratePassword)
-  //prompt/confim for type of characters
-  //store the responses
-  //based on the responses trim/build available poool of characters
-  //build passowrk letter by letter
-  //generate radonm int within range of availavle chars lenfth 
-  //add char to results 
-  //do until length  === desire passwords length
+  generateBtn.addEventListener("click", writePassword);
+ 
+ //out global variable
+  //multiple arrays of numbers, specials, uppercase, lowercase
+ var uppercaseLetters = ["'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z',"]
+ var lowercaseLetters = ["'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'"]
+ var specials = [",'!','@','#','$','%','^','&','*','(',')'"]
+ var numbers = ["'0','1','2','3','4','5','6','7','8','9'"]
+ var password = "" 
+ var finalresult = ""; //final password result
 
-  return result
-}
 
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+
+ function generatePassword (){
+  var length = prompt("Choose length of password between 8 and 126")
+  console.log(length)
+  if (length < 8 || length > 126) {
+    alert("Please choose length of password between 8 and 126!")
+    return
+  }
+
+var lowercaseLetters = confirm ("Do you want lowercase letter?")
+var uppercaseLetters = confirm ("Do you want uppercase letters?")
+var specials = confirm ("Do you want special characters?")
+var numbers = confirm ("Do you want numbers?")
+console.log(uppercaseLetters, lowercaseLetters, numbers, specials);
+
+
+  if (!lowercaseLetters && !uppercaseLetters && !numbers && !specials) {
+    alert("Please enter value."); 
+  }
+  
+  if (lowercaseLetters) {
+    password += lowercaseLetters
+  }
+
+  if (uppercaseLetters) {
+    password += uppercaseLetters
+  }
+
+  if (numbers) {
+    password += numbers
+  }
+
+  if (specials) {
+    password += specials
+  }
+
+   for (var i = 0; i < length; i++) {
+     finalresult += (password.charAt(Math.floor(Math.random()*password.length)))
+   }
+
+   return finalresult 
+
+   }
+
 
